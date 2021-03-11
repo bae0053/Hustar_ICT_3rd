@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="name">Name</string>
+    <string name="job">Job</string>
+    <string name="phone_num">Phone_Number</string>
+    <string name="join">회원가입</string>
+    <string name="joinID">ID</string>
+    <string name="joinPass">PW</string>
+    <string name="Background">배경색</string>
+    <string name="blueBTN">파란색</string>
+    <string name="GreenBYN">초록색</string>
+    <string name="RanBTN">랜덤 색깔</string>
+    <string name="above">ABOVE</string>
+    <string name="right">RIGHT</string>
+    <string name="center">CENTER</string>
+    <string name="left">LEFT</string>
+    <string name="botton">BOTTON</string>
+    <string name="messege">안녕하세요</string>
+    <string name="date">2021.03.04</string>
+    <string name="toast">토스트</string>
+    <string name="one">ONE</string>
+    <string name="two">TWO</string>
+    <string name="three">THREE</string>
+    <string name="four">FOUR</string>
+    <string name="five">FIVE</string>
+
+    />
+</resources>
