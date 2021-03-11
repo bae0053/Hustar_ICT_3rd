@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ExamEvent</string>
+    <string name="check">CHECK</string>
+    <string name="red">RED</string>
+    <string name="green">GREEN</string>
+    <string name="radiotitle">RADIO_TITLE</string>
+    <string name="left">LEFTBTN</string>
+    <string name="name">NAME</string>
+</resources>
