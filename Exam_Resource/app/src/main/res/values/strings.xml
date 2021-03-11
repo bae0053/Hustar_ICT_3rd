@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Exam_Resource</string>
+    <string name="msg">Enter message</string>
+    <string name="nothing">NOTHING</string>
+    <string name="lemon">LEMON</string>
+    <string name="change">바꾸기</string>
+
+</resources>
