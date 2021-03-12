@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/img"
         android:maxHeight="40dp"
-        tools:srcCompat="@drawable/ic_launcher_background" />
+        tools:srcCompat="@drawable/ic_launcher_background"
+        android:onClick="onClick"/>
 
     <LinearLayout
         android:layout_width="0dp"
@@ -36,7 +37,8 @@
                 android:id="@+id/nameTXT"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="3" />
+                android:layout_weight="3"
+                android:onClick="onClick"/>
 
         </LinearLayout>
 
@@ -56,7 +58,8 @@
                 android:id="@+id/phoneTXT"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="3" />
+                android:layout_weight="3"
+                android:onClick="onClick"/>
         </LinearLayout>
 
         <LinearLayout
@@ -75,7 +78,8 @@
                 android:id="@+id/emailTXT"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="3" />
+                android:layout_weight="3"
+                android:onClick="onClick"/>
 
         </LinearLayout>
 

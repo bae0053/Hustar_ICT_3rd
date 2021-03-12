@@ -3,6 +3,7 @@ package com.example.addressexam;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,20 +43,28 @@ public class ItemDataAdapter extends ArrayAdapter<ItemData> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         // Data를 xml Layout에 넣어서 보이고 사용할 수 있도록 객체를 생성
         // (1) Item Layout xml ---> java 객체 변환 ( Layout 초기화 )
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        convertView = inflater.inflate(layoutResId,null);
 
-        // (2) Item Layout's View 객체 가져오기
-        ImageView   imageView = convertView.findViewById(R.id.imageView);
-        TextView    nameView = convertView.findViewById(R.id.name);
-        TextView    nameTXTView = convertView.findViewById(R.id.nameTXT);
-        TextView    phoneView = convertView.findViewById(R.id.phone);
-        TextView    phoneTXTView = convertView.findViewById(R.id.phoneTXT);
-        TextView    emailView = convertView.findViewById(R.id.email);
-        TextView    emailTXTView = convertView.findViewById(R.id.emailTXT);
+        if (convertView == null) {
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(layoutResId,null);
+
+            ItemDataHolder holder = new ItemDataHolder(convertView);
+            convertView.setTag(holder);
+        }
+        ItemDataHolder holder = (ItemDataHolder) convertView.getTag();
+
+        // (2) Item Layout's View 객체 가져오기 ----> ItemDataHolder 클래스에서 진행
+
+        TextView    nameTXTView = holder.nameTXTView;
+        TextView    phoneTXTView = holder.phoneTXTView;
+        TextView    emailTXTView = holder.emailTXTView;
+        ImageView   imageView = holder.imageView;
 
         // (3) Layout에 들어갈 Data 준비
         final ItemData    item = DataList.get(position);
+
+        Log.i("TAG","item" + item.getName());
+        Log.i("TAG","nameTXT : " + nameTXTView);
 
         // (4) Layout <---> Data 연결
         nameTXTView.setText(item.getName());
